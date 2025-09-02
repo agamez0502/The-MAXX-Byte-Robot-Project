@@ -1,6 +1,6 @@
 package com.maxxbyte;
 
-public class MapNode {
+public class MapPoint {
 
     //properties=================================================================================
     // represents one single location/point on the map
@@ -9,7 +9,7 @@ public class MapNode {
     private String type; // "building", "path", "obstacle"
 
     //constructor================================================================================
-    public MapNode(int x, int y, String type) {
+    public MapPoint(int x, int y, String type) {
         this.x = x;
         this.y = y;
         this.type = type;
