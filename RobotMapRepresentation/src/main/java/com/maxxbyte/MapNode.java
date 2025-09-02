@@ -3,9 +3,9 @@ package com.maxxbyte;
 public class MapNode {
 
     //properties=================================================================================
-    // represents one point on the map
-    private int x;
-    private int y;
+    // represents one single location/point on the map
+    private int x; // x coordinate
+    private int y; // y coordinate
     private String type; // "building", "path", "obstacle"
 
     //constructor================================================================================
