@@ -23,7 +23,7 @@ public class RobotMap {
     // convert to a robot-friendly representation (stub for now)
     public void generateRepresentation() {
         // implement conversion logic (grid, graph, etc.)
-        System.out.println("Generating robot map representation: \n");
+        System.out.println("\nGenerating robot map representation: \n");
     }
 
     //getters and setters========================================================================
