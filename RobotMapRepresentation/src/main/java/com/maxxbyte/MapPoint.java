@@ -16,6 +16,10 @@ public class MapPoint {
     }
 
     //methods====================================================================================
+    @Override
+    public String toString() {
+        return "MapPoint{x=" + x + ", y=" + y + ", type='" + type + "'}";
+    }
 
     //getters and setters========================================================================
     public int getX() {

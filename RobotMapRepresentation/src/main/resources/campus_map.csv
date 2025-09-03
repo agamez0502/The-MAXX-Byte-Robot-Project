@@ -1,0 +1,9 @@
+x,y,type
+0,0,building
+1,0,path
+2,0,path
+3,0,dropoff
+1,1,path
+2,1,obstacle
+3,1,path
+4,1,building
