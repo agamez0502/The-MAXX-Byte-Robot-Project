@@ -7,7 +7,7 @@ import java.io.IOException;
 // handles file uploads and parsing for CSV-like files into map points
 public class MapParser {
 
-    public RobotMap loadFromFile(String filePath) {
+    public RobotMap parseFile(String filePath) {
         RobotMap map = new RobotMap();
 
         // try-with-resources ensures that the file gets closed automatically
@@ -29,7 +29,7 @@ public class MapParser {
 
                 // validate we have exactly 3 columns: x, y, type
                 if (parts.length < 3) {
-                    System.out.println("\nSkipping invalid line (not enough columns): " + line);
+                    System.out.println("\nSkipping invalid line: " + line);
                     continue;
                 }
 
@@ -43,14 +43,14 @@ public class MapParser {
                     map.addPoint(new MapPoint(x, y, type));
 
                 } catch (NumberFormatException e) {
-                    System.out.println("\nInvalid number in line: " + line);
+                    System.out.println("\nSkipping invalid numeric data: " + line);
                 }
             }
         } catch (IOException e) {
-            System.out.println("\nFailed to read file: " + e.getMessage());
+            System.out.println("\nError reading file: " + e.getMessage());
             ;
         }
-
+        // return a complete map instead of just raw list
         return map;
     }
 }
